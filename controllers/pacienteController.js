@@ -1,5 +1,5 @@
 import Veterinario from "../models/Veterinario.js";
-import Paciente from "../models/paciente.js";
+import Paciente from "../models/Paciente.js";
 
 const agregarPaciente = async (req,res) => {
     const paciente = new Paciente(req.body);//instancia de req.body
