@@ -167,7 +167,7 @@ const nuevoPassword = async (req,res) => {
       await veterinario.save();//guardas cambios
       res.json({msg:'Password modificado correctamente'});
     } catch (error) {
-      console.log(error);
+      res.status(400).json({msg:error.message})
     }
 }
 
