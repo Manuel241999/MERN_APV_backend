@@ -3,7 +3,7 @@ import Paciente from "../models/Paciente.js";
 const agregarPaciente = async (req,res) => {
     const paciente = new Paciente(req.body);//instancia de req.body
     paciente.veterinario = req.Veterinario._id;//Guardas en campo lo que te trajo
-    try {
+    try {//XD
         //como detectar que veterinario es el que esta viendo dicho paciente:
         const pacienteAlmacenado = await paciente.save();
         res.json(pacienteAlmacenado);
